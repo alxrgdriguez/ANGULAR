@@ -1,0 +1,11 @@
+<p>Soy el primer componente {{user()}}</p>
+
+<h2>Listado de Productos</h2>
+<ul>
+    @for (producto of productos; track producto.id) {
+    <li (click)="verProducto(producto.nombre)"> Nombre: <strong>{{producto.nombre}}</strong><br> Precio:
+        {{producto.precio}} €
+    </li>
+    }
+</ul>
+<app-segundo [productoSeleccionado]="productoSeleccionado"></app-segundo>
