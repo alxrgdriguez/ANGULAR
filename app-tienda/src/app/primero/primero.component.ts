@@ -1,4 +1,4 @@
-import { Component, input} from '@angular/core';
+import { Component, input, output} from '@angular/core';
 import { SegundoComponent } from "../segundo/segundo.component";
 
 @Component({
@@ -50,7 +50,10 @@ export class PrimeroComponent {
   verProducto(nombre: string) {
     this.productoSeleccionado = nombre;
     document.getElementById("productoSeleccionado")!.innerHTML = this.productoSeleccionado;
+    this.productoSeleccionadoOutPut.emit(nombre);
   
   }
+
+  productoSeleccionadoOutPut = output<string>();
 
 }

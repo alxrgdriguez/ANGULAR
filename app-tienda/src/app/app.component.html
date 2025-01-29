@@ -1,3 +1,4 @@
 <h1>Bienvenidos a la tienda de {{usuario}} con Angular</h1>
-<app-primero [user]="usuario"></app-primero>
+<p>Y tu producto favorito es: {{productoPulsado}}</p>
+<app-primero [user]="usuario" (productoSeleccionadoOutPut)="productoFavorito($event)"></app-primero>
 <router-outlet />

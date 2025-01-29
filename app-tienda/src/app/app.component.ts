@@ -11,4 +11,10 @@ import { PrimeroComponent } from "./primero/primero.component";
 export class AppComponent {
   title = 'app-tienda';
   usuario="Alejandro";
+
+  productoPulsado ="";
+  productoFavorito(nombre: string) {
+    this.productoPulsado = nombre;
+    document.getElementById("productoPulsado")!.innerHTML = this.productoPulsado;
+  }
 }
